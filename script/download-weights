@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 
-import os
+# import os
 import sys
 from transformers import AutoTokenizer
-from auto_gptq import AutoGPTQForCausalLM
+
+# from auto_gptq import AutoGPTQForCausalLM
 
 # append project directory to path so predict.py can be imported
-sys.path.append('.')
+sys.path.append(".")
 
 from predict import MODEL_NAME, MODEL_BASENAME, MODEL_CACHE
+
 use_triton = True
 
 tokenizer = AutoTokenizer.from_pretrained(
